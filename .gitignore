@@ -37,3 +37,12 @@ next-env.d.ts
 dev
 
 public/prompts.json
+
+# package-lock
+package-lock.json
+yarn-error.log
+
+.vscode
+.idea
+# dist
+/dist

@@ -127,7 +127,7 @@ const DEFAULT_CONFIG: ChatConfig = {
   avatar: "1f603",
   fontSize: 14,
   theme: Theme.Auto as Theme,
-  tightBorder: false,
+  tightBorder: true,
 
   disablePromptHint: false,
 

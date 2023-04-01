@@ -1,23 +1,19 @@
 <div align="center">
 <img src="./static/icon.svg" alt="预览"/>
 
-<h1 align="center">ChatGPT Next Web</h1>
-
-一键免费部署你的私人 ChatGPT 网页应用。
-
-One-Click to deploy your own ChatGPT web UI.
-
-[演示 Demo](https://chat-gpt-next-web.vercel.app/) / [反馈 Issues](https://github.com/Yidadaa/ChatGPT-Next-Web/issues) / [加入 Discord](https://discord.gg/zrhvHCr79N) / [QQ 群](https://user-images.githubusercontent.com/16968934/228190818-7dd00845-e9b9-4363-97e5-44c507ac76da.jpeg) / [打赏开发者](https://user-images.githubusercontent.com/16968934/227772541-5bcd52d8-61b7-488c-a203-0330d8006e2b.jpg) / [Donate](#捐赠-donate-usdt)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web)
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
-
-![主界面](./static/cover.png)
+<h1 align="center">ChatGPT Electron</h1>
 
 </div>
 
-## 主要功能
+## 项目介绍
+本项目是二次开发项目，源项目地址：[ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
+
+- 启动项目: ```yarn dev```  
+- electron 启动： ```yarn elt:dev```  
+- electron 打包（先启动electron再执行）： ```yarn elt:pack```  
+
+
+### 主要功能
 
 - 在 1 分钟内使用 Vercel **免费一键部署**
 - 精心设计的 UI，响应式设计，支持深色模式
@@ -27,26 +23,7 @@ One-Click to deploy your own ChatGPT web UI.
 - 一键导出聊天记录，完整的 Markdown 支持
 - 拥有自己的域名？好上加好，绑定后即可在任何地方**无障碍**快速访问
 
-## Features
-
-- **Deploy for free with one-click** on Vercel in under 1 minute
-- Responsive design, and dark mode
-- Fast first screen loading speed (~85kb)
-- Awesome prompts powered by [awesome-chatgpt-prompts-zh](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) and [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
-- Automatically compresses chat history to support long conversations while also saving your tokens
-- One-click export all chat history with full Markdown support
-
-## 开发计划 Roadmap
-- System Prompt: pin a user defined prompt as system prompt 为每个对话设置系统 Prompt [#138](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/138)
-- User Prompt: user can edit and save custom prompts to prompt list 允许用户自行编辑内置 Prompt 列表
-- Self-host Model: support llama, alpaca, ChatGLM, BELLE etc. 支持自部署的大语言模型
-- Plugins: support network search, caculator, any other apis etc. 插件机制，支持联网搜索、计算器、调用其他平台 api [#165](https://github.com/Yidadaa/ChatGPT-Next-Web/issues/165)
-
-### 不会开发的功能 Not in Plan
-- User login, accounts, cloud sync 用户登陆、账号管理、消息云同步
-- UI text customize 界面文字自定义
-
-## 开始使用
+## 使用
 
 1. 准备好你的 [OpenAI API Key](https://platform.openai.com/account/api-keys);
 2. 点击右侧按钮开始部署：
@@ -73,20 +50,6 @@ One-Click to deploy your own ChatGPT web UI.
 
 本项目会持续更新，如果你想让代码库总是保持更新，可以查看 [Github 的文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) 了解如何让 fork 的项目与上游代码同步，建议定期进行同步操作以获得新功能。
 
-你可以 star/watch 本项目或者 follow 作者来及时获得新功能更新通知。
-
-If you have deployed your own project with just one click following the steps above, you may encounter the issue of "Updates Available" constantly showing up. This is because Vercel will create a new project for you by default instead of forking this project, resulting in the inability to detect updates correctly.
-
-We recommend that you follow the steps below to re-deploy:
-
-- Delete the original repo;
-- Fork this project;
-- Go to the Vercel dashboard, delete the original project, then create a new project and select the project you just forked to redeploy;
-- Please manually add an environment variable named `OPENAI_API_KEY` and enter your API key as the value during the redeploy process.
-
-This project will be continuously maintained. If you want to keep the code repository up to date, you can check out the [Github documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) to learn how to synchronize a forked project with upstream code. It is recommended to perform synchronization operations regularly.
-
-You can star or watch this project or follow author to get release notifictions in time.
 
 ## 配置密码 Password
 
@@ -159,46 +122,8 @@ OPENAI_API_KEY=<your api key here>
 1. 安装 nodejs 和 yarn，具体细节请询问 ChatGPT；
 2. 执行 `yarn install && yarn dev` 即可。
 
-### 本地部署 Local Deployment
-
-```shell
-bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/scripts/setup.sh)
-```
-
-### 容器部署 Docker Deployment
-
-```shell
-docker pull yidadaa/chatgpt-next-web
-
-docker run -d -p 3000:3000 -e OPENAI_API_KEY="" -e CODE="" yidadaa/chatgpt-next-web
-```
-
-## 截图 Screenshots
-
-![设置 Settings](./static/settings.png)
-
-![更多展示 More](./static/more.png)
-
-
-## 捐赠 Donate USDT
-> BNB Smart Chain (BEP 20)
-```
-0x67cD02c7EB62641De576a1fA3EdB32eA0c3ffD89
-```
-
 ## 鸣谢 Special Thanks
-
-### 捐赠者 Sponsor
-
-[@mushan0x0](https://github.com/mushan0x0)
-[@ClarenceDan](https://github.com/ClarenceDan)
-[@zhangjia](https://github.com/zhangjia)
-[@hoochanlon](https://github.com/hoochanlon)
 
 ### 贡献者 Contributor
 
 [Contributors](https://github.com/Yidadaa/ChatGPT-Next-Web/graphs/contributors)
-
-## LICENSE
-
-[Anti 996 License](https://github.com/kattgu7/Anti-996-License/blob/master/LICENSE_CN_EN)
